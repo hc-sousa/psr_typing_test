@@ -61,18 +61,19 @@ def main():
 
     ### start the test
     while True:
-        input_start_ts = time()
         # request letter
         expected = random.choice(alphabet)
         print(f"Type letter '{Fore.BLUE}{expected}{Style.RESET_ALL}'")
+        input_start_ts = time()
 
         # read input
         received = readchar().lower()
+        input_end_ts = time()
         if received == " ": #stop the game if the user presses the space bar
             break
         print(f"You typed letter {Fore.GREEN if received == expected else Fore.RED}{received}{Style.RESET_ALL}")
             
-        stats['inputs'].append(Input(requested = expected, received = received, duration = time() - input_start_ts))
+        stats['inputs'].append(Input(requested = expected, received = received, duration = input_end_ts - input_start_ts))
 
         if use_time_mode:
             if max_value <= time() - start_ts:
