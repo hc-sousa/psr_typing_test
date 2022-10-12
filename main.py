@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 
+'''
+Group 1 
+ANDRÉ RIBEIRO FERREIRA 97694
+DIOGO MARCELO OLIVEIRA MONTEIRO 97606
+HENRIQUE CARVALHO SOUSA 98324
+'''
+
 import argparse
 import random
 import string
