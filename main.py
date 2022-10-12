@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 '''
 Group 1 
 ANDRÉ RIBEIRO FERREIRA 97694
@@ -23,7 +22,7 @@ def main():
     ### define and read arguments
     parser = argparse.ArgumentParser(description='Definition of test mode')
     parser.add_argument('-utm', '--use_time_mode',
-        action=argparse.BooleanOptionalAction,
+        action="store_true",
         default=False,
         help='Max number of secs for time mode or maximum number of inputs for number of inputs mode.')
     parser.add_argument('-mv', '--max_value',
